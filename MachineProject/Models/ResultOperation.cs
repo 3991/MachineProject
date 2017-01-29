@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Web;
+
+namespace MachineProject.Models
+{
+    public class ResultOperation
+    {
+        public int Id { get; set; }
+
+        [Required]
+        public decimal Score { get; set; }
+
+        [Required]
+        public int CheckingAccountId { get; set; }
+        public virtual CheckingAccount CheckingAccount { get; set; }
+    }
+}

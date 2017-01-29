@@ -1,0 +1,25 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron">
+    <h2>Bienvenue sur avions en papier land</h2>
+    <p class="lead"><i>Les avions en papier représentent l'art de l'origami que l'on transmet de père en fils.</i></p>
+</div>
+
+
+<div class="row">
+    <div class="col-md-12">
+        <a href="@Url.Action("Details", "CheckingAccount")" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-user"></span> Mon compte</a>
+        <a href="@Url.Action("NewScore", "ResultOperation", new { checkingAccountId = ViewBag.CheckingAccountId})" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-circle-arrow-down"></span> Ajouter un nouveau score</a>
+    </div>
+    <div class="col-md-6"></div>
+</div>
+
+<div class="row">
+    <div class="col-md-12">
+        <center>
+            <img src="./../../Content/plane.jpg" alt="Plane">
+        </center>
+    </div>
+</div>
