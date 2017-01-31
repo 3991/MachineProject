@@ -1,0 +1,33 @@
+﻿@model IEnumerable<MachineProject.Models.Plane>
+
+@{
+    ViewBag.Title = "GetPlanes";
+}
+
+<h2>Les avions</h2>
+
+<table class="table table-striped">
+    <tr>
+        <th>#</th>
+        <th>
+            @Html.DisplayNameFor(model => model.Name)
+        </th>
+        <th></th>
+    </tr>
+
+    @foreach (var item in Model)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ID)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+        </tr>
+    }
+
+   
+</table>
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>

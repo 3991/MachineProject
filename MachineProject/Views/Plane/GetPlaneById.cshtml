@@ -1,0 +1,23 @@
+﻿@model MachineProject.Models.Player
+
+@{
+    ViewBag.Title = "Mon compte";
+}
+
+<h2>Mon compte</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Name)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Name)
+        </dd>
+
+    </dl>
+
+    <a href="@Url.Action("Index", "Home")" class="btn btn-primary btn-large btn-block"><span class="glyphicon glyphicon-arrow-left"></span> Retour</a>
+</div>

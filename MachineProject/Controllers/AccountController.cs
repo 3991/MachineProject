@@ -57,6 +57,7 @@ namespace MachineProject.Controllers
         [AllowAnonymous]
         public ActionResult Login(string returnUrl)
         {
+
             ViewBag.ReturnUrl = returnUrl;
             return View();
         }
@@ -155,6 +156,10 @@ namespace MachineProject.Controllers
                 var result = await UserManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
+                    var currentUser = UserManager.FindByName(user.UserName);
+
+                    var roleresult = UserManager.AddToRole(currentUser.Id, "player");
+
                     var db = new ApplicationDbContext();
                     var accountNumber = (123456 + db.CheckingAccounts.Count().ToString().PadLeft(10, '0'));
                     var checkingAccount = new CheckingAccount { FirstName = model.FirstName, LastName = model.LastName, AccountNumber = accountNumber, Result = 0, ApplicationUserId = user.Id };

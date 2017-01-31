@@ -23,11 +23,6 @@ namespace MachineProject.Models
         public string LastName { get; set; }
 
        
-        /*public string Name { get
-            {
-                return string.Format("{0} {1}", this.FirstName, this.LastName);
-            }
-        }*/
 
         [Display(Name = "Meilleur résultat (secondes)")]
         public decimal Result { get; set; }

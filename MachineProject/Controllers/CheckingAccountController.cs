@@ -15,8 +15,9 @@ namespace MachineProject.Controllers
             return View();
         }
 
+        [Authorize(Roles = "player")]
         // GET: CheckingAccount/Details/
-        public ActionResult Details()
+        public ActionResult Details(int id)
         {
             var checkingAccount = new CheckingAccount
             {
@@ -25,6 +26,8 @@ namespace MachineProject.Controllers
                 LastName = "Testlastname",
                 Result = 5
             };
+
+            
             return View(checkingAccount);
         }
 

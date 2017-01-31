@@ -33,5 +33,9 @@ namespace MachineProject.Models
         public DbSet<CheckingAccount> CheckingAccounts { get; set; }
 
         public DbSet<ResultOperation> ResultOperations { get; set; }
+
+        public DbSet<Plane> Planes { get; set; }
+
+        public DbSet<Player> Players { get; set; }
     }
 }

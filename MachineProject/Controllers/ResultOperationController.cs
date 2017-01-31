@@ -12,6 +12,7 @@ namespace MachineProject.Controllers
     {
         private ApplicationDbContext db = new ApplicationDbContext();
 
+        [Authorize(Roles = "player")]
         // GET: ResultOperation/NewScore
         public ActionResult NewScore(int checkingAccountId)
         {
